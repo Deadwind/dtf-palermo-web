@@ -9,3 +9,6 @@ desktop.ini
 # Editor directories
 .vscode/
 .idea/
+
+# Local backups
+backup-con-uv/
