@@ -34,4 +34,35 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.08)';
     }
   });
+
+  // 3. Pestañas Interactivas de Guía (DTF Textil vs DTF UV)
+  const guideTabBtns = document.querySelectorAll('.guide-tab-btn');
+  const guidePanels = document.querySelectorAll('.guide-panel');
+
+  if (guideTabBtns.length > 0 && guidePanels.length > 0) {
+    guideTabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        
+        // Quitar estado activo de todos los botones y paneles
+        guideTabBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        guidePanels.forEach(panel => {
+          panel.classList.remove('active');
+          panel.hidden = true;
+        });
+
+        // Activar el botón seleccionado y su panel
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        const activePanel = document.getElementById(targetId);
+        if (activePanel) {
+          activePanel.classList.add('active');
+          activePanel.hidden = false;
+        }
+      });
+    });
+  }
 });
