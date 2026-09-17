@@ -1,7 +1,7 @@
 # DTF Palermo - Web Comercial
 
 Sitio web oficial de **DTF Palermo** (Palermo, CABA).
-Servicio profesional de impresión por metro en **DTF Textil (58 cm)** y **DTF UV (58 cm)**.
+Servicio profesional de impresión por metro en **DTF Textil (58 cm)** y **DTF UV (57 cm)**.
 
 ## Características
 - **Tecnologías:** HTML5 semántico, CSS3 Vanilla moderno (Dark UI) y JavaScript nativo.
